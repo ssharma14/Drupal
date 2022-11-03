@@ -17,13 +17,13 @@
 /sites/*/translations
 /sites/*/tmp
 /sites/*/cache
-/sites/*
 
 # Ignore testing related files
 /sites/simpletest
 
 # Ignore drupal core (if not versioning drupal sources)
 /core
+/modules
 /modules/README.txt
 /profiles/README.txt
 /sites/README.txt
