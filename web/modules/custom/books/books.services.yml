@@ -1,0 +1,5 @@
+services:
+  # Defines a service which requires the module_handler for its constructor.
+  books.api_utilities:
+    class: Drupal\books\BookAPIUtilities
+    arguments: ['@http_client_factory', '@messenger', '@cache.default', '@entity_type.manager', '@file.repository', '@current_user']
