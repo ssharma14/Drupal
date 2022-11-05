@@ -1,0 +1,49 @@
+<header aria-label="Site header" class="header" id="header" role="banner">
+     {{ page.branding }}
+     {{ page.navigation }}
+</header>
+<main aria-label="Site main content" class="content" id="content" role="main">
+    <section class="bookList-nav">
+        <form name="form" role="search">
+            <fieldset>
+                <legend>Search for the books:</legend>
+                <div class="label-box">
+                    <label for="search">
+                        <input type="text" aria-label="Search" name="search" value="" id="searchinput" placeholder="Search..." autocomplete="off"/>
+                    </label>
+                    <button id="searchbutton" class="search-button" aria-label="Search" type="submit" title="Search for the books">
+                        <span class="search-icon">
+                            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g id="Group_975" data-name="Group 975" transform="translate(-1758 -107)">
+                                    <g id="icon-action-search_24px" transform="translate(1758 107)">
+                                    <rect id="Boundary" width="24" height="24" fill="none"/>
+                                    <path id="_Color" data-name=" ↳Color" d="M16.467,18h0l-5.146-5.134v-.813l-.278-.288a6.7,6.7,0,1,1,.721-.721l.288.278h.813L18,16.467,16.468,18ZM6.689,2.058a4.631,4.631,0,1,0,4.631,4.631A4.637,4.637,0,0,0,6.689,2.058Z" transform="translate(3 3)" fill="#285274"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+        <div class="books-layout-option">
+            <select aria-label="Select option to change book list layout" name="layout" id="slectBookListLayout" class="slectBookListLayout">
+                <option value="grid" selected>Grid</option>
+                <option value="list">List</option>
+            </select>
+        </div>
+    </section>
+    <section class="book-list-content-section">
+        {{ page.content }}
+    </section>
+  </main>
+<footer aria-label="Site footer" class="footer" id="footer" role="contentinfo">
+   <div class="footer--top">
+     {{ page.footer_first }}
+     {{ page.footer_second }}
+     {{ page.footer_third }}
+   </div>
+   <div class="footer--bottom">
+       {{ page.footer_bottom }}
+   </div>
+</footer>
