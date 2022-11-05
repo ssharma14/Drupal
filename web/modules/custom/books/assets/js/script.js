@@ -20,7 +20,9 @@ searchSubmit.addEventListener('click', e => {
           var item = data.items[i];
           let imgZoom = item.volumeInfo.imageLinks.thumbnail.replace('zoom=1', 'zoom=10');
           newHtml = '<article class="book-card">';
-          newHtml += '<div class="book-card--img"><img src="' + imgZoom + '" alt="' + item.volumeInfo.title + ' book thumbnail" /></div>';
+          if (item.volumeInfo.imageLinks.thumbnail) {
+            newHtml += '<div class="book-card--img"><img src="' + imgZoom + '" alt="' + item.volumeInfo.title + ' book thumbnail" /></div>';
+          }
           newHtml += '<div class="book-card--info">';
           newHtml += '<h4 class="book-title">' + item.volumeInfo.title + '</h4>';
           newHtml += '<p class="book-authors"><strong>Authors: </strong>' + item.volumeInfo.authors + '</p>';
