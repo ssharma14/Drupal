@@ -47,16 +47,18 @@ body img{
     position: relative;
 }
 
-.label-box{
+.search-container fieldset{
     display: flex;
     width: 100%;
+    border: none;
+    padding: 0;
 }
 
-.label-box label{
+.search-container fieldset label{
     width: calc(100% - 50px);
 }
 
-.label-box input{
+.search-container fieldset input{
     height: 40px;
     padding: 10px;
     border: 1px solid #000;
@@ -64,7 +66,7 @@ body img{
     width: 100%;
 }
 
-.label-box .search-button{
+.search-container fieldset .search-button{
     height: 40px;
     width: 50px;
     background-color: transparent;
@@ -77,7 +79,7 @@ body img{
 }
 
 .books-layout-option select{
-    padding: 10px 45px 10px 10px;
+    padding: 10px 85px 10px 10px;
     border: 1px solid black;
     display: inline-block;
     border-radius: 4px;
@@ -136,7 +138,7 @@ body img{
 }
 
 @media(min-width:768px) {
-    .bookList-nav{
+    .bookList-nav .search-container{
         display: flex;
         justify-content: space-between;
         align-items: center;
