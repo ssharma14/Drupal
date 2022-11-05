@@ -1,19 +1,19 @@
-<header aria-label="Site header" class="header" id="header" role="banner">
+<header aria-label="Site header" class="header" id="header">
      {{ page.branding }}
      {{ page.navigation }}
 </header>
-<main aria-label="Site main content" class="content" id="content" role="main">
+<main aria-label="Site main content" class="content" id="content">
     <section class="bookList-nav">
-        <form name="form" role="search">
-            <fieldset>
-                <legend>Search for the books:</legend>
-                <div class="label-box">
-                    <label for="search">
+        <h2>Search for the books</h2>
+        <div class="search-container">
+            <form name="form" role="search">
+                <fieldset>
+                    <label for="searchinput">
                         <input type="text" aria-label="Search" name="search" value="" id="searchinput" placeholder="Search..." autocomplete="off"/>
                     </label>
                     <button id="searchbutton" class="search-button" aria-label="Search" type="submit" title="Search for the books">
                         <span class="search-icon">
-                            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <g id="Group_975" data-name="Group 975" transform="translate(-1758 -107)">
                                     <g id="icon-action-search_24px" transform="translate(1758 107)">
                                     <rect id="Boundary" width="24" height="24" fill="none"/>
@@ -23,21 +23,21 @@
                             </svg>
                         </span>
                     </button>
-                </div>
-            </fieldset>
-        </form>
-        <div class="books-layout-option">
-            <select aria-label="Select option to change book list layout" name="layout" id="slectBookListLayout" class="slectBookListLayout">
-                <option value="grid" selected>Grid</option>
-                <option value="list">List</option>
-            </select>
+                </fieldset>
+            </form>
+            <div class="books-layout-option">
+                <select aria-label="Select option to change book list layout" name="layout" id="slectBookListLayout" class="slectBookListLayout">
+                    <option value="grid" selected>Grid</option>
+                    <option value="list">List</option>
+                </select>
+            </div>
         </div>
     </section>
     <section class="book-list-content-section">
         {{ page.content }}
     </section>
   </main>
-<footer aria-label="Site footer" class="footer" id="footer" role="contentinfo">
+<footer aria-label="Site footer" class="footer" id="footer">
    <div class="footer--top">
      {{ page.footer_first }}
      {{ page.footer_second }}
