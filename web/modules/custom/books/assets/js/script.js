@@ -27,7 +27,7 @@ searchSubmit.addEventListener('click', e => {
           if (item.volumeInfo.description) {
             newHtml += '<p class="book-description">' + item.volumeInfo.description.slice(0, 300) + '</p>';
           }
-          newHtml += '<a title="link to book details" href="' + item.volumeInfo.infoLink + '" class="book-detail-link btn" target="_blank">Link</a>';
+          newHtml += '<a role="button" title="link to book details" href="' + item.volumeInfo.infoLink + '" class="book-detail-link btn" target="_blank">Link</a>';
           newHtml += '</div">';
           newHtml += '</article">';
           result.innerHTML += newHtml;
